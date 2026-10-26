@@ -1,0 +1,14 @@
+# не отправлять в контекст сборки лишнее
+**/.venv
+**/node_modules
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+**/.ruff_cache
+.git
+.gitignore
+backups
+docs
+assets
+*.md
+!backend/README.md

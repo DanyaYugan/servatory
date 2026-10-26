@@ -1,0 +1,29 @@
+name: servatory
+
+services:
+  servatory:
+    image: ${SERVATORY_IMAGE:-danyayugan/servatory:0.2.0-beta}
+    container_name: servatory
+    restart: unless-stopped
+    group_add:
+      - "${DOCKER_GID:-112}"
+    ports:
+      - "${SERVATORY_PORT:-8090}:${SERVATORY_PORT:-8090}"
+    environment:
+      SERVATORY_PORT: "${SERVATORY_PORT:-8090}"
+      SERVATORY_DATA: /data
+      SERVATORY_LOG_LEVEL: "${SERVATORY_LOG_LEVEL:-info}"
+    volumes:
+      - servatory-data:/data
+      - servatory-backups:/backups
+      - /var/run/docker.sock:/var/run/docker.sock
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:${SERVATORY_PORT:-8090}/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  servatory-data:
+  servatory-backups:
+    name: servatory-backups

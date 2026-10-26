@@ -1,0 +1,36 @@
+# секреты и данные
+.env
+.env.*
+!.env.example
+!.env.release.example
+CREDENTIALS.txt
+/data/
+/var/
+*.db
+*.db-wal
+*.db-shm
+*.key
+secrets.env
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+*.egg-info/
+
+# node
+node_modules/
+frontend/dist/
+.vite/
+
+# редакторы
+.idea/
+.vscode/
+*.swp
+
+# логи и бэкапы
+*.log
+backups/

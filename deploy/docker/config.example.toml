@@ -1,0 +1,50 @@
+# Servatory — пример файла настроек.
+# Скопируйте в каталог данных как config.toml или дайте панели создать его
+# при первом старте, затем правьте.
+#
+# Переменные окружения перекрывают значения из этого файла:
+# SERVATORY_PORT, SERVATORY_HOST, SERVATORY_ADMIN_LOGIN,
+# SERVATORY_ADMIN_PASSWORD, SERVATORY_DATA, SERVATORY_LOG_LEVEL,
+# SERVATORY_DEMO,
+# SERVATORY_SESSION_HOURS, SERVATORY_BACKUP_DIR, SERVATORY_BACKUP_VOLUME,
+# SERVATORY_BACKUP_KEEP, SERVATORY_DOCKER_SOCKET, SERVATORY_DOCKER_TIMEOUT.
+
+[server]
+# адрес прослушивания и порт панели
+host = "0.0.0.0"
+port = 8090
+
+[auth]
+# главный администратор
+login = "admin"
+password = "admin"
+# superadmin — полный доступ; admin, operator, viewer появятся позже
+role = "superadmin"
+# время жизни входа, часы
+session_hours = 12
+
+[ui]
+language = "ru"
+theme = "dark"
+
+[docker]
+# сокет Docker внутри контейнера
+socket = "/var/run/docker.sock"
+timeout = 5
+
+[backups]
+# каталог внутри панели и том Docker для архивов
+# в Docker: том servatory-backups, при нативной установке: каталог на хосте
+dir = "/backups"
+volume = "servatory-backups"
+keep = 5
+
+[logging]
+# debug | info | warning | error
+level = "info"
+
+[features]
+# демо-режим без Docker
+demo = false
+# none | labels | external | managed
+# домен панели, если появится TLS

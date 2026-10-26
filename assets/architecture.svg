@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1740" height="1280" viewBox="0 0 1740 1280" font-family="Segoe UI, Roboto, sans-serif">
+<rect width="1740" height="1280" fill="#0b1418"/>
+<defs><marker id="arr-2dd4bf" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2dd4bf"/></marker><marker id="arr-f0c987" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#f0c987"/></marker><marker id="arr-7fc8f0" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7fc8f0"/></marker><marker id="arr-a9d6a0" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#a9d6a0"/></marker><marker id="arr-c9a9f0" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#c9a9f0"/></marker></defs>
+<text x="40" y="44" fill="#cfe6e1" font-size="22" font-weight="600" text-anchor="start">Hub · архитектура продукта</text>
+<text x="40" y="66" fill="#7f9d99" font-size="11.5" font-weight="400" text-anchor="start">один процесс: core + web + bot · отдельно: jobs · провайдеры для Docker, TLS и HTTP</text>
+<rect x="20" y="86" width="1700" height="96" rx="14" fill="#0f1e24" stroke="#22403f" stroke-dasharray="6 5"/>
+<text x="36" y="108" fill="#cfe6e1" font-size="14" font-weight="600" text-anchor="start">Клиенты</text>
+<rect x="40" y="118" width="250" height="52" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="52" y="139" fill="#7fc8f0" font-size="13.5" font-weight="600" text-anchor="start">Браузер</text>
+<text x="52" y="156" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">веб-интерфейс, сессия</text>
+<rect x="310" y="118" width="250" height="52" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="322" y="139" fill="#7fc8f0" font-size="13.5" font-weight="600" text-anchor="start">Telegram</text>
+<text x="322" y="156" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">бот: команды и уведомления</text>
+<rect x="580" y="118" width="250" height="52" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="592" y="139" fill="#7fc8f0" font-size="13.5" font-weight="600" text-anchor="start">CLI / API-токены</text>
+<text x="592" y="156" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">автоматизация, скрипты</text>
+<rect x="850" y="118" width="250" height="52" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="862" y="139" fill="#2dd4bf" font-size="13.5" font-weight="600" text-anchor="start">Caddy · вход</text>
+<text x="862" y="156" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">домены и TLS</text>
+<rect x="1120" y="118" width="260" height="52" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="1132" y="139" fill="#a9d6a0" font-size="13.5" font-weight="600" text-anchor="start">Пользователи и роли</text>
+<text x="1132" y="156" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">admin / operator / viewer</text>
+<rect x="1400" y="118" width="300" height="52" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="1412" y="139" fill="#7fc8f0" font-size="13.5" font-weight="600" text-anchor="start">Внешний прокси</text>
+<text x="1412" y="156" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">если Caddy не наш</text>
+<rect x="40" y="206" width="1120" height="268" rx="16" fill="#0e1a1f" stroke="#3a6b63" stroke-dasharray="9 6"/>
+<text x="60" y="232" fill="#e8c98a" font-size="16" font-weight="600" text-anchor="start">hub — один процесс: core + web + bot</text>
+<text x="60" y="250" fill="#7f9d99" font-size="10.6" font-weight="400" text-anchor="start">единственный, у кого есть доступ к Docker и базе на запись</text>
+<rect x="60" y="264" width="200" height="66" rx="12" fill="#15282d" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="72" y="285" fill="#8fd8cf" font-size="12.5" font-weight="600" text-anchor="start">web</text>
+<text x="72" y="302" fill="#9fc0ba" font-size="10.4" font-weight="400" text-anchor="start">SPA, статика</text>
+<rect x="274" y="264" width="200" height="66" rx="12" fill="#15282d" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="286" y="285" fill="#8fd8cf" font-size="12.5" font-weight="600" text-anchor="start">api v1</text>
+<text x="286" y="302" fill="#9fc0ba" font-size="10.4" font-weight="400" text-anchor="start">REST + SSE</text>
+<rect x="488" y="264" width="200" height="66" rx="12" fill="#15282d" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="500" y="285" fill="#a9d6a0" font-size="12.5" font-weight="600" text-anchor="start">auth / RBAC</text>
+<text x="500" y="302" fill="#9fc0ba" font-size="10.4" font-weight="400" text-anchor="start">сессии, токены, роли</text>
+<rect x="702" y="264" width="200" height="66" rx="12" fill="#15282d" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="714" y="285" fill="#c9a9f0" font-size="12.5" font-weight="600" text-anchor="start">registry</text>
+<text x="714" y="302" fill="#9fc0ba" font-size="10.4" font-weight="400" text-anchor="start">сервисы, группы, метки</text>
+<rect x="916" y="264" width="224" height="66" rx="12" fill="#15282d" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="928" y="285" fill="#f0c987" font-size="12.5" font-weight="600" text-anchor="start">providers</text>
+<text x="928" y="302" fill="#9fc0ba" font-size="10.4" font-weight="400" text-anchor="start">docker · tls · http</text>
+<rect x="60" y="344" width="200" height="66" rx="12" fill="#15282d" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="72" y="365" fill="#f0c987" font-size="12.5" font-weight="600" text-anchor="start">actions</text>
+<text x="72" y="382" fill="#9fc0ba" font-size="10.4" font-weight="400" text-anchor="start">add, update, backup, rollback</text>
+<rect x="274" y="344" width="200" height="66" rx="12" fill="#15282d" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="286" y="365" fill="#2dd4bf" font-size="12.5" font-weight="600" text-anchor="start">ingress</text>
+<text x="286" y="382" fill="#9fc0ba" font-size="10.4" font-weight="400" text-anchor="start">Caddy: managed · external</text>
+<rect x="488" y="344" width="200" height="66" rx="12" fill="#15282d" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="500" y="365" fill="#8fd8cf" font-size="12.5" font-weight="600" text-anchor="start">updates</text>
+<text x="500" y="382" fill="#9fc0ba" font-size="10.4" font-weight="400" text-anchor="start">digest, версии, политика</text>
+<rect x="702" y="344" width="200" height="66" rx="12" fill="#15282d" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="714" y="365" fill="#a9d6a0" font-size="12.5" font-weight="600" text-anchor="start">audit</text>
+<text x="714" y="382" fill="#9fc0ba" font-size="10.4" font-weight="400" text-anchor="start">журнал действий</text>
+<rect x="916" y="344" width="224" height="66" rx="12" fill="#15282d" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="928" y="365" fill="#7fc8f0" font-size="12.5" font-weight="600" text-anchor="start">bot</text>
+<text x="928" y="382" fill="#9fc0ba" font-size="10.4" font-weight="400" text-anchor="start">Telegram-клиент, права</text>
+<text x="60" y="440" fill="#7f9d99" font-size="10.6" font-weight="400" text-anchor="start">правила: только core пишет в Docker и базу · web и bot ходят через api · jobs читает базу отдельно</text>
+<rect x="1190" y="206" width="530" height="268" rx="16" fill="#0e1a1f" stroke="#3a6b63"/>
+<text x="1208" y="232" fill="#e8c98a" font-size="15" font-weight="600" text-anchor="start">/data — всё состояние</text>
+<rect x="1208" y="244" width="240" height="60" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="1220" y="265" fill="#c9a9f0" font-size="13.5" font-weight="600" text-anchor="start">hub.db</text>
+<text x="1220" y="282" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">SQLite: сервисы, права,</text>
+<text x="1220" y="297" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">журнал, операции</text>
+<rect x="1462" y="244" width="240" height="60" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="1474" y="265" fill="#c9a9f0" font-size="13.5" font-weight="600" text-anchor="start">config.yaml</text>
+<text x="1474" y="282" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">порт, TLS, домен, язык</text>
+<rect x="1208" y="316" width="240" height="60" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="1220" y="337" fill="#a9d6a0" font-size="13.5" font-weight="600" text-anchor="start">key</text>
+<text x="1220" y="354" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">ключ шифрования</text>
+<text x="1220" y="369" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">секретов, 600</text>
+<rect x="1462" y="316" width="240" height="60" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="1474" y="337" fill="#a9d6a0" font-size="13.5" font-weight="600" text-anchor="start">backups/</text>
+<text x="1474" y="354" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">копии базы и экспорт</text>
+<rect x="1208" y="388" width="494" height="60" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="1220" y="409" fill="#8fd8cf" font-size="13.5" font-weight="600" text-anchor="start">services/&lt;name&gt;/</text>
+<text x="1220" y="426" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">хост-каталоги сервисов, если выбраны</text>
+<text x="40" y="512" fill="#cfe6e1" font-size="15" font-weight="600" text-anchor="start">Провайдеры</text>
+<rect x="40" y="526" width="330" height="84" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="52" y="547" fill="#f0c987" font-size="13.5" font-weight="600" text-anchor="start">docker-local</text>
+<text x="52" y="564" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">unix:///var/run/docker.sock</text>
+<text x="52" y="579" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">через socket-proxy</text>
+<rect x="390" y="526" width="330" height="84" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="402" y="547" fill="#f0c987" font-size="13.5" font-weight="600" text-anchor="start">docker-remote</text>
+<text x="402" y="564" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">TLS в 1.0 · агент в 1.1</text>
+<rect x="740" y="526" width="300" height="84" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="752" y="547" fill="#f0c987" font-size="13.5" font-weight="600" text-anchor="start">http</text>
+<text x="752" y="564" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">только наблюдение</text>
+<text x="752" y="579" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">без управления</text>
+<rect x="1060" y="526" width="300" height="84" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2" stroke-dasharray="7 5"/>
+<text x="1072" y="547" fill="#f0c987" font-size="13.5" font-weight="600" text-anchor="start">systemd (позже)</text>
+<text x="1072" y="564" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">через агент</text>
+<rect x="1400" y="512" width="320" height="380" rx="16" fill="#0e1a1f" stroke="#22403f"/>
+<text x="1418" y="538" fill="#2dd4bf" font-size="14" font-weight="600" text-anchor="start">Caddy · режимы</text>
+<rect x="1418" y="550" width="284" height="58" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="1430" y="571" fill="#2dd4bf" font-size="13.5" font-weight="600" text-anchor="start">managed</text>
+<text x="1430" y="588" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">хаб поднимает и пишет конфиг</text>
+<rect x="1418" y="616" width="284" height="58" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="1430" y="637" fill="#2dd4bf" font-size="13.5" font-weight="600" text-anchor="start">external</text>
+<text x="1430" y="654" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">правит чужой Caddy по API</text>
+<rect x="1418" y="682" width="284" height="58" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="1430" y="703" fill="#2dd4bf" font-size="13.5" font-weight="600" text-anchor="start">labels</text>
+<text x="1430" y="720" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">маршруты из меток</text>
+<rect x="1418" y="748" width="284" height="58" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="1430" y="769" fill="#2dd4bf" font-size="13.5" font-weight="600" text-anchor="start">none</text>
+<text x="1430" y="786" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">за чужим прокси</text>
+<text x="1418" y="826" fill="#7f9d99" font-size="10.4" font-weight="400" text-anchor="start">validate → load с etag → откат при ошибке</text>
+<text x="40" y="660" fill="#cfe6e1" font-size="15" font-weight="600" text-anchor="start">Сервисы</text>
+<rect x="40" y="674" width="400" height="96" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="52" y="695" fill="#c9a9f0" font-size="13.5" font-weight="600" text-anchor="start">Контейнеры на этом хосте</text>
+<text x="52" y="712" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">метки hub.*: домен, группа,</text>
+<text x="52" y="727" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">проверка, бэкап, политика</text>
+<rect x="470" y="674" width="400" height="96" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="482" y="695" fill="#c9a9f0" font-size="13.5" font-weight="600" text-anchor="start">Контейнеры на других хостах</text>
+<text x="482" y="712" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">docker-remote: TLS</text>
+<text x="482" y="727" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">или агент (1.1)</text>
+<rect x="900" y="674" width="360" height="96" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="912" y="695" fill="#c9a9f0" font-size="13.5" font-weight="600" text-anchor="start">Сервисы вне Docker</text>
+<text x="912" y="712" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">http-проверка, карточка,</text>
+<text x="912" y="727" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">без действий</text>
+<rect x="40" y="812" width="620" height="170" rx="16" fill="#0e1a1f" stroke="#3a6b63" stroke-dasharray="9 6"/>
+<text x="60" y="838" fill="#a9d6a0" font-size="15" font-weight="600" text-anchor="start">jobs — отдельный процесс</text>
+<text x="60" y="856" fill="#7f9d99" font-size="10.6" font-weight="400" text-anchor="start">работает, даже если hub упал</text>
+<rect x="60" y="868" width="280" height="62" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="72" y="889" fill="#a9d6a0" font-size="12.5" font-weight="600" text-anchor="start">правила</text>
+<text x="72" y="906" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">health, backup_age, updates, disk</text>
+<rect x="356" y="868" width="284" height="62" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="368" y="889" fill="#a9d6a0" font-size="12.5" font-weight="600" text-anchor="start">уведомления</text>
+<text x="368" y="906" fill="#9fc0ba" font-size="10.8" font-weight="400" text-anchor="start">Telegram напрямую, webhook</text>
+<rect x="60" y="940" width="280" height="30" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="72" y="961" fill="#a9d6a0" font-size="11.5" font-weight="600" text-anchor="start">тишина и дедупликация</text>
+<rect x="356" y="940" width="284" height="30" rx="12" fill="#132226" stroke="#2b4a4a" stroke-width="1.2"/>
+<text x="368" y="961" fill="#a9d6a0" font-size="11.5" font-weight="600" text-anchor="start">watchdog: hub и jobs</text>
+<line x1="165" y1="170" x2="165" y2="206" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arr-2dd4bf)"/>
+<text x="172" y="194" fill="#5eead4" font-size="10.4" font-weight="400" text-anchor="start">HTTPS</text>
+<line x1="435" y1="170" x2="435" y2="206" stroke="#7fc8f0" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arr-7fc8f0)"/>
+<text x="442" y="194" fill="#7fc8f0" font-size="10.4" font-weight="400" text-anchor="start">long polling</text>
+<line x1="705" y1="170" x2="705" y2="206" stroke="#7fc8f0" stroke-width="1.5" marker-end="url(#arr-7fc8f0)"/>
+<text x="712" y="194" fill="#7fc8f0" font-size="10.4" font-weight="400" text-anchor="start">Bearer</text>
+<polyline points="1160,300 1190,300" fill="none" stroke="#c9a9f0" stroke-width="1.5" marker-end="url(#arr-c9a9f0)"/>
+<polyline points="1028,474 1028,500 205,500 205,526" fill="none" stroke="#f0c987" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arr-f0c987)"/>
+<text x="240" y="496" fill="#f0c987" font-size="10.4" font-weight="400" text-anchor="start">управление: создать, удалить, проверить</text>
+<line x1="205" y1="610" x2="240" y2="674" stroke="#f0c987" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arr-f0c987)"/>
+<line x1="555" y1="610" x2="620" y2="674" stroke="#f0c987" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arr-f0c987)"/>
+<line x1="890" y1="610" x2="1010" y2="674" stroke="#a9d6a0" stroke-width="1.5" marker-end="url(#arr-a9d6a0)"/>
+<polyline points="1140,474 1140,500 1380,500 1380,560 1418,560" fill="none" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arr-2dd4bf)"/>
+<line x1="1400" y1="740" x2="1262" y2="740" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arr-2dd4bf)"/>
+<text x="1300" y="732" fill="#5eead4" font-size="10.4" font-weight="400" text-anchor="start">трафик</text>
+<polyline points="200,812 200,660 1200,660 1200,474" fill="none" stroke="#a9d6a0" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arr-a9d6a0)"/>
+<text x="1000" y="654" fill="#a9d6a0" font-size="10.4" font-weight="400" text-anchor="start">читает состояние (только чтение)</text>
+<rect x="20" y="1010" width="1700" height="250" rx="14" fill="#0e1a1f" stroke="#22403f"/>
+<text x="40" y="1040" fill="#cfe6e1" font-size="15" font-weight="600" text-anchor="start">Как это работает</text>
+<line x1="40" y1="1064" x2="104" y2="1064" stroke="#2dd4bf" stroke-width="2"/>
+<text x="118" y="1068" fill="#9fc0ba" font-size="11.2" font-weight="400" text-anchor="start">сплошная — трафик пользователей и конфиг Caddy</text>
+<line x1="40" y1="1086" x2="104" y2="1086" stroke="#f0c987" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="118" y="1090" fill="#9fc0ba" font-size="11.2" font-weight="400" text-anchor="start">штриховая — управление Docker через провайдеры</text>
+<line x1="40" y1="1108" x2="104" y2="1108" stroke="#a9d6a0" stroke-width="2" stroke-dasharray="2 3"/>
+<text x="118" y="1112" fill="#9fc0ba" font-size="11.2" font-weight="400" text-anchor="start">пунктир — проверки и чтение состояния</text>
+<line x1="40" y1="1130" x2="104" y2="1130" stroke="#7fc8f0" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="118" y="1134" fill="#9fc0ba" font-size="11.2" font-weight="400" text-anchor="start">штриховая — Telegram и уведомления</text>
+<line x1="40" y1="1152" x2="104" y2="1152" stroke="#c9a9f0" stroke-width="2"/>
+<text x="118" y="1156" fill="#9fc0ba" font-size="11.2" font-weight="400" text-anchor="start">фиолетовая — данные и состояние</text>
+<text x="40" y="1184" fill="#9fc0ba" font-size="11.2" font-weight="400" text-anchor="start">• Добавил контейнер с метками — появился в списке, на карточке и в проверках.</text>
+<text x="40" y="1204" fill="#9fc0ba" font-size="11.2" font-weight="400" text-anchor="start">• Удалил — исчез; том и бэкап остаются по выбору.</text>
+<text x="40" y="1224" fill="#9fc0ba" font-size="11.2" font-weight="400" text-anchor="start">• Одна установка: hub + jobs (+ Caddy по желанию); состояние в /data.</text>
+<text x="40" y="1244" fill="#9fc0ba" font-size="11.2" font-weight="400" text-anchor="start">• Права проверяются на каждом действии; всё пишется в журнал.</text>
+<text x="40" y="1264" fill="#9fc0ba" font-size="11.2" font-weight="400" text-anchor="start">• Hub упал — сервисы и Caddy работают, jobs продолжает слать алерты.</text>
+</svg>

@@ -1,0 +1,29 @@
+[Unit]
+Description=Servatory control panel
+Documentation=https://github.com/servatory-hq/servatory
+After=network-online.target docker.service
+Wants=network-online.target
+OnFailure=servatory-failure@%n.service
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=servatory
+Group=servatory
+SupplementaryGroups=docker
+EnvironmentFile=-/etc/servatory/secrets.env
+Environment=SERVATORY_DATA=/var/lib/servatory
+ExecStart=/opt/servatory/.venv/bin/python -m app.cli
+WorkingDirectory=/opt/servatory/backend
+Restart=always
+RestartSec=3
+TimeoutStopSec=20
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/lib/servatory
+
+[Install]
+WantedBy=multi-user.target

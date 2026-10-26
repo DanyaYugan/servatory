@@ -1,0 +1,37 @@
+name: servatory
+
+services:
+  servatory:
+    build:
+      context: ../..
+      dockerfile: deploy/docker/Dockerfile
+    image: servatory:local
+    container_name: servatory
+    restart: unless-stopped
+    # группа docker на хосте: нужна для доступа к сокету
+    # узнать GID: stat -c '%g' /var/run/docker.sock
+    group_add:
+      - "${DOCKER_GID:-112}"
+    ports:
+      - "${SERVATORY_PORT:-8090}:${SERVATORY_PORT:-8090}"
+    environment:
+      # переменные перекрывают config.toml; в Docker порт задаётся здесь
+      SERVATORY_PORT: "${SERVATORY_PORT:-8090}"
+      SERVATORY_DATA: /data
+      SERVATORY_LOG_LEVEL: "${SERVATORY_LOG_LEVEL:-info}"
+    volumes:
+      # config.toml создаётся при первом старте в томе /data
+      - servatory-data:/data
+      - servatory-backups:/backups
+      # доступ к Docker API: список контейнеров и действия
+      - /var/run/docker.sock:/var/run/docker.sock
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:${SERVATORY_PORT:-8090}/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  servatory-data:
+  servatory-backups:
+    name: servatory-backups

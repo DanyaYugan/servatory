@@ -1,0 +1,11 @@
+[Unit]
+Description=Notify about failure of %i
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=servatory
+Group=servatory
+EnvironmentFile=-/etc/servatory/secrets.env
+ExecStart=/usr/local/bin/servatory-notify-failure %i
