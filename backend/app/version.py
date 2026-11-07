@@ -6,4 +6,4 @@
 """
 
 __version__ = "0.2.0-beta"
-__build__ = "beta.1"
+__build__ = "beta.2"

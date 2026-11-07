@@ -9,6 +9,8 @@ import SecurityPanel from "../components/SecurityPanel.vue";
 import TlsPanel from "../components/TlsPanel.vue";
 import UsersPanel from "../components/UsersPanel.vue";
 import AuditPanel from "../components/AuditPanel.vue";
+import ProfileForm from "../components/ProfileForm.vue";
+import UpdatePanel from "../components/UpdatePanel.vue";
 
 const route = useRoute();
 const router = useRouter();
@@ -19,11 +21,17 @@ function setTab(name) {
   router.replace({ query: { ...route.query, tab: name } });
 }
 const meta = ref(null);
+const profile = ref(null);
 const error = ref("");
 
 onMounted(async () => {
   try {
-    meta.value = await request("/api/v1/meta");
+    const [metaData, profileData] = await Promise.all([
+      request("/api/v1/meta"),
+      request("/api/v1/system/profile"),
+    ]);
+    meta.value = metaData;
+    profile.value = profileData;
   } catch (err) {
     error.value = String(err.message || err);
   }
@@ -60,8 +68,20 @@ onMounted(async () => {
       </tbody>
     </table>
     <p v-if="error" class="form-error">{{ error }}</p>
+    <h3 style="margin-top: 22px">Название и адрес</h3>
+    <ProfileForm
+      v-if="profile"
+      :initial="profile"
+      :show-skip="false"
+      @saved="profile = $event"
+    />
+
+    <h3 style="margin-top: 22px">Обновление панели</h3>
+    <UpdatePanel v-if="can('manage')" />
+    <p v-else class="muted">Обновление доступно администратору.</p>
+
     <p class="muted" style="margin-top: 12px">
-      Редактирование настроек появится позже. Сейчас файл правится на сервере.
+      Остальные параметры — в /data/config.toml на сервере.
     </p>
     <div class="form-actions">
       <button class="ghost" @click="logout">Выйти из панели</button>

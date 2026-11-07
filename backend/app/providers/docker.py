@@ -413,6 +413,27 @@ class DockerProvider:
             except DockerError:
                 pass
 
+    async def run_detached(
+        self, image: str, cmd: list[str], binds: list[str], workdir: str | None = None
+    ) -> str:
+        """Запускает одноразовый контейнер и не ждёт его завершения."""
+        await self.pull_image(image)
+        name = f"servatory-update-{secrets.token_hex(4)}"
+        payload = {
+            "Image": image,
+            "Cmd": cmd,
+            "Tty": False,
+            "WorkingDir": workdir or "/",
+            "HostConfig": {
+                "Binds": binds,
+                "NetworkMode": "none",
+                "AutoRemove": True,
+            },
+        }
+        container_id = await self._create_from_payload(name, payload)
+        await self.start(container_id)
+        return container_id
+
     async def _wait(self, container_id: str) -> int:
         try:
             async with self._client(timeout=600) as client:

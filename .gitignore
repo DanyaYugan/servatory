@@ -34,3 +34,7 @@ frontend/dist/
 # логи и бэкапы
 *.log
 backups/
+
+# временные каталоги тестов
+backend/pytest-of-*
+backend/servatory-test-*

@@ -53,7 +53,16 @@ curl http://127.0.0.1:8090/health
 curl http://127.0.0.1:8090/api/v1/meta
 ```
 
+## Установка одной командой
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/DanyaYugan/servatory/v0.2.0-beta/deploy/docker/install-release.sh | bash
+```
+
+Скрипт скачает compose, определит GID Docker, поднимет контейнер и дождётся `/health`.
+
 ## Установка из Docker Hub
+
 
 ```bash
 docker run -d --name servatory --restart unless-stopped \

@@ -13,6 +13,16 @@ Linux с Docker 24+
 
 ## 2. Установка
 
+### 2.0. Одна команда
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/DanyaYugan/servatory/v0.2.0-beta/deploy/docker/install-release.sh | bash
+```
+
+Переменные: `SERVATORY_DIR`, `SERVATORY_PORT`, `SERVATORY_VERSION`.
+
+
+
 ### 2.1. Образ из Docker Hub
 
 ```bash

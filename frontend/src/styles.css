@@ -288,3 +288,18 @@ button { font: inherit; }
   padding: 12px; color: #cfe9e6; font-size: 12px; line-height: 1.5;
   max-height: 420px; overflow: auto; white-space: pre-wrap; word-break: break-word;
 }
+
+/* ---------- мастер первого запуска ---------- */
+
+.wizard-backdrop {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(3, 12, 14, 0.82);
+  display: grid; place-items: center; padding: 24px;
+}
+.wizard-card {
+  width: min(620px, 100%);
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: 16px; padding: 24px;
+}
+.wizard-card h1 { color: var(--mint); font-size: 22px; }
+.wizard-card .sub { color: var(--muted); font-size: 13px; margin: 6px 0 14px; }
